@@ -8,7 +8,9 @@
 
 #include <set>
 #include "CTECGraph.hpp"
+#include <iostream>
 using namespace CTECData;
+using namespace std;
 
 template <class Type>
 const int CTECGraph<Type> :: MAXIMUM;
@@ -83,6 +85,46 @@ void CTECGraph<Type> :: removeEdge(int source, int target)
     assert(source < size() && target <size());
     adjacencyMatrix[source] [target] = false;
 }
+
+template <class Type>
+void CTECGraph<Type> :: depthFirstTraversal(CTECGraph<Type> currentGraph, int vertex)
+{
+    bool markedVertices[MAXIMUM];
+    assert(vertex < currentGraph.size());
+    std::fill_n(markedVertices, currentGraph.size(), false);
+    depthFirstTraversal(currentGraph, vertex, markedVertices);
+}
+
+template <class Type>
+void CTECGraph<Type> :: depthFirstTraversal(CTECGraph<Type> currentGraph, int vertex, bool * markedVertices)
+{
+    std::set<int> connections = currentGraph.neighbors(vertex);
+    std::set<int>::iterator setIterator;
+    
+    markedVertices[vertex] = true;
+    cout << currentGraph[vertex] << endl;
+    
+    for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
+    {
+        if(!markedVertices[*setIterator])
+        {
+            depthFirstTraversal(currentGraph, *setIterator, markedVertices);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

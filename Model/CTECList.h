@@ -27,7 +27,7 @@ public:
 	void addToEnd(const Type& value);
 	Type removeFromPosition(int index);
 	Type removeFromFront();
-	Type removeFromBack();
+	Type removeFromEnd();
 	Type removeFromIndex(int index);
 	Type getEnd();
 	Type getFront();

@@ -19,7 +19,7 @@ Timer::~Timer()
 {
 
 }
-void Timer::displayTimerInformation()
+void Timer::displayTimerInfo()
 {
 	cout << fixed;
 	cout << setprecision(8);

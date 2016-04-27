@@ -93,14 +93,14 @@ void NodeController :: sortData()
     sortTimer.startTimer();
     randomNumberArray.selectionSort();
     sortTimer.stopTimer();
-    sortTimer.displayTimerInformation();
+    sortTimer.displayTimerInfo();
     
     sortTimer.resetTimer();
     
     sortTimer.startTimer();
     std::sort(std::begin(myCPlusPlusArray), std::end(myCPlusPlusArray));
     sortTimer.stopTimer();
-    sortTimer.displayTimerInformation();
+    sortTimer.displayTimerInfo();
     
     sortTimer.resetTimer();
     
@@ -110,7 +110,7 @@ void NodeController::doMergesort()
 {
     mergeData = new int[500000];
     
-    for(int spot = 0; spot < 500000; spot)
+    for(int spot = 0; spot < 500000; spot++)
     {
         int myRandom = rand();
         mergeData[spot] = myRandom;
@@ -164,7 +164,7 @@ void NodeController::merge(int data[], int sizeOne, int sizeTwo)
     {
         if(data[copied1] < (data + sizeOne)[copied2])
         {
-            temp[copied++] + data[copied1++];
+            temp[copied++] = data[copied1++];
         }
         else
         {
@@ -242,7 +242,7 @@ void NodeController::doQuick()
     mergeTimer.startTimer();
     quicksort(0, 1000000000-1);
     mergeTimer.stopTimer();
-    mergeTimer.displayTimerInformation();
+    mergeTimer.displayTimerInfo();
     
     delete [] mergeData;
 }

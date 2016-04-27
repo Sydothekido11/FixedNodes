@@ -18,7 +18,7 @@ public:
 	void startTimer();
 	void stopTimer();
 	void resetTimer();
-	void displayTimerInformation();
+	void displayTimerInfo();
 	long getExecutionTimeInMicroseconds();
 };
 

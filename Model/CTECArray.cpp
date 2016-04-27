@@ -79,6 +79,7 @@ Type CTECArray<Type>::get(int pos)
 				return current->getValue();
 			}
 		}
+    return current->getValue();
 
 }
 

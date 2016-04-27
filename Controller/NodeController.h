@@ -24,7 +24,7 @@ private:
 	CTECArray<int> * notHipsterInts;
 	CTECList<int> * numbers;
 	Timer arrayTimer;
-	void testList();
+	
     void sortData();
     
     void swap(int first, int second);
@@ -42,6 +42,7 @@ public:
 	NodeController();
 	virtual ~NodeController();
 	void start();
+    void testList();
 };
 
 
