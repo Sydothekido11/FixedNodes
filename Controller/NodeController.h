@@ -16,6 +16,9 @@
 #include <iostream>
 #include "../Model/CTECArray.cpp"
 #include "../Model/CTECList.cpp"
+#include"../Model/CTECGraph.cpp"
+#include "../Model/CTECBinaryTree.cpp"
+
 using namespace std;
 
 class NodeController
@@ -24,8 +27,9 @@ private:
 	CTECArray<int> * notHipsterInts;
 	CTECList<int> * numbers;
 	Timer arrayTimer;
-	
     void sortData();
+    void testList();
+    void searchTest();
     
     void swap(int first, int second);
     void quicksort(int first, int last);
@@ -37,12 +41,16 @@ private:
     void mergesort(int data [], int size);
     void merge(int data [], int sizeOne, int sizeTwo);
     
+    void tryGraphs();
+    
+    void tryTree();
+    
     
 public:
 	NodeController();
 	virtual ~NodeController();
 	void start();
-    void testList();
+    
 };
 
 

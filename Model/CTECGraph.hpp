@@ -21,7 +21,7 @@ namespace CTECData
         bool adjacencyMatrix [MAXIMUM] [MAXIMUM];
         Type labels [MAXIMUM];
         int manyVertices;
-        void depthFirstTravesal(CTECGraph<Type> graph, int vertex, bool markedVertices());
+        void depthFirstTraversal(CTECGraph<Type> graph, int vertex, bool markedVertices[]);
     public:
         CTECGraph();
         ~CTECGraph();
