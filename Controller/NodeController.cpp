@@ -247,7 +247,12 @@ void NodeController::doQuick()
     delete [] mergeData;
 }
 
-
+void NodeController :: tryGraphs()
+{
+    CTECGraph<int> testGraph;
+    testGraph.addVertex(7);
+    testGraph.depthFirstTraversal(testGraph, 0);
+}
 
 
 

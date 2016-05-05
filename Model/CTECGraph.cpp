@@ -164,12 +164,7 @@ void CTECGraph<Type> :: breadthFirstTraversal(CTECGraph<Type> currentGraph, int 
     }
 }
 
-void NodeController :: tryGraphs()
-{
-    CTECGraph<int> testGraph;
-    testGraph.addVertex(7);
-    testGraph.depthFirstTraversal(testGraph, 0);
-}
+
 
 
 
