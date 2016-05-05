@@ -17,6 +17,7 @@
 		16470EB31CCEA897003017AC /* CTECBinaryTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16470EAD1CCEA897003017AC /* CTECBinaryTree.cpp */; };
 		16470EB41CCEA897003017AC /* CTECGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16470EAF1CCEA897003017AC /* CTECGraph.cpp */; };
 		16470EB51CCEA897003017AC /* TreeNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16470EB11CCEA897003017AC /* TreeNode.cpp */; };
+		1698FD201CDBC45400B02D09 /* CTECHashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1698FD1E1CDBC45400B02D09 /* CTECHashTable.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,8 @@
 		16470EB01CCEA897003017AC /* CTECGraph.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTECGraph.hpp; sourceTree = "<group>"; };
 		16470EB11CCEA897003017AC /* TreeNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeNode.cpp; sourceTree = "<group>"; };
 		16470EB21CCEA897003017AC /* TreeNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TreeNode.hpp; sourceTree = "<group>"; };
+		1698FD1E1CDBC45400B02D09 /* CTECHashTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CTECHashTable.cpp; sourceTree = "<group>"; };
+		1698FD1F1CDBC45400B02D09 /* CTECHashTable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CTECHashTable.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				16470EA31CCEA86B003017AC /* Node.h */,
 				16470EA41CCEA86B003017AC /* Timer.cpp */,
 				16470EA51CCEA86B003017AC /* Timer.h */,
+				1698FD1E1CDBC45400B02D09 /* CTECHashTable.cpp */,
+				1698FD1F1CDBC45400B02D09 /* CTECHashTable.hpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				16470EAC1CCEA86B003017AC /* Timer.cpp in Sources */,
 				16470EB51CCEA897003017AC /* TreeNode.cpp in Sources */,
 				16470EA81CCEA86B003017AC /* ArrayNode.cpp in Sources */,
+				1698FD201CDBC45400B02D09 /* CTECHashTable.cpp in Sources */,
 				16470EB31CCEA897003017AC /* CTECBinaryTree.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +313,7 @@
 				16470E961CCEA83A003017AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
