@@ -6,6 +6,8 @@
 //  Copyright © 2016 Nemelka, Sydney. All rights reserved.
 //
 
+#include "HashNode.cpp"
+
 #ifndef CTECHashTable_hpp
 #define CTECHashTable_hpp
 
@@ -19,15 +21,25 @@ namespace CTECData
     private:
         int size;
         int capacity;
-        Type * internalStorage;
+        int chainedCapacity;
+        int chainedSize;
+        CTECList<HashNode<Type>> * chainedStorage;
+        HashNode<Type> * internalStorage;
+        void updateChainCapacity();
         double efficiencyPercentage;
         
         int findPosition(const Type& value);
         int handleCollision(const Type& value);
         void updateSize();
+    
+        int getNextPrime();
+        bool isPrime(int candidateNumber);
+        
     public:
         CTECHashTable();
         ~CTECHashTable();
+        void add(HashNode<Type> currentNode);
+        void addChained(HashNode<Type> currentNode);
         
         void add(const Type & value);
         bool remove(const Type & value);
