@@ -55,3 +55,53 @@ void CTECHashTable<Type> :: add(const Type& value)
     size++;
     }
 }
+
+template <class Type>
+void CTECHashTable<Type> :: updateChainedCapacity()
+{
+    int updatedChainedCapacity = getNextPrime();
+    int oldChainedCapacity = chainedCapacity;
+    chainedCapacity = updatedChainedCapacity;
+    
+    CTECList<HashNode<Type>> * largerChainedStorage = new CTECList<HashNode<Type>>[updatedChainedCapacity];
+    
+    for(int index = 0; index < oldChainedCapacity; index++)
+    {
+        if(chainedStorage[index] != nullptr)
+        {
+            CTECList<HashNode<Type>> temp = chainedStorage[index];
+            for(int innderIndex = 0; innerIndex< temp.getSize(); innerIndex++)
+            {
+                int updatedChainedPosition = findPositiont(temp.getFromIndex(innerIndex));
+                if(largerChainedStorage[updatedChainedPosition] == nullptr)
+                {
+                    CTECList<HashNode<Type>> insertList;
+                    insertList.addEnd(temp.getFromIndex(innerIndex));
+                    largerChainedStorage[updatedChainedPosition] = innerList;
+                }
+                else
+                {
+                    largerChainedStorage[updatedChainedPosition].addEnd(temp.getFromIndex(innerIndex));
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
