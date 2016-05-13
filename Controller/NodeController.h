@@ -45,6 +45,8 @@ private:
     
     void tryTree();
     
+    void testHashTable();
+    
     
 public:
 	NodeController();

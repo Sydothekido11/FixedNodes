@@ -7,14 +7,15 @@
 //
 
 #include "HashNode.cpp"
+#include "CTECList.h"
 
 #ifndef CTECHashTable_hpp
 #define CTECHashTable_hpp
 
 #include <iostream>
 
-namespace CTECData
-{
+
+
     template <class Type>
     class CTECHashTable
     {
@@ -24,13 +25,13 @@ namespace CTECData
         int chainedCapacity;
         int chainedSize;
         CTECList<HashNode<Type>> * chainedStorage;
-        HashNode<Type> * internalStorage;
+        HashNode<Type> ** internalStorage;
         void updateChainCapacity();
         double efficiencyPercentage;
         
-        int findPosition(const Type& value);
-        int handleCollision(const Type& value);
-        void updateSize();
+        int findPosition(HashNode<Type> currentNode);
+        int handleCollision(HashNode<Type> currenNode);
+        void updateCapacity();
     
         int getNextPrime();
         bool isPrime(int candidateNumber);
@@ -41,11 +42,11 @@ namespace CTECData
         void add(HashNode<Type> currentNode);
         void addChained(HashNode<Type> currentNode);
         
-        void add(const Type & value);
-        bool remove(const Type & value);
-        bool contains(const Type & value);
+       
+        bool remove(HashNode<Type> currentNode);
+        bool contains(HashNode<Type> currentNode);
         int getSize();
     };
-}
+
 
 #endif /* CTECHashTable_hpp */

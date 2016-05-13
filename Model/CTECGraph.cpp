@@ -30,7 +30,7 @@ CTECGraph<Type> :: ~CTECGraph()
 }
 
 template <class Type>
-int CTECGraph<Type> :: size() 
+int CTECGraph<Type> :: size()const
 {
     return manyVertices;
 }
