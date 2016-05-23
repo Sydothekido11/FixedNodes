@@ -7,6 +7,12 @@
 //
 
 #include "HashNode.hpp"
+
+template <class Type>
+HashNode<Type> :: HashNode()
+{
+    
+}
 template <class Type>
 HashNode<Type> :: HashNode(int key, const Type& value)
 {
